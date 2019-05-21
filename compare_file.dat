@@ -1,0 +1,1216 @@
+000015a0 <_run_test>:
+15a0:	4e09                	li	t3,2
+
+  Clk#      Delay      PC      X5_T0          
+    24    2    000015a0    000015a0    
+
+15a2:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    25    1    000015a2    000015a0    00000002    
+
+15a4:	4101                	li	sp,0
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    26    1    000015a4    000015a0    00000002    
+
+15a6:	00208663          	beq	ra,sp,15b2 <_run_test+0x12>
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    27    1    000015a6    000015a0    00000002    
+
+15aa:	1dc01563          	bne	zero,t3,1774 <fail>
+15ae:	01c01663          	bne	zero,t3,15ba <test_3>
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    30    2    000015ae    000015a0    00000002    
+
+15b2:	fe208ee3          	beq	ra,sp,15ae <_run_test+0xe>
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    28    1    000015b2    000015a0    00000002    
+
+15b6:	1bc01f63          	bne	zero,t3,1774 <fail>
+
+000015ba <test_3>:
+15ba:	4e0d                	li	t3,3
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    32    2    000015ba    000015a0    00000002    
+
+15bc:	4085                	li	ra,1
+
+  Clk#      Delay      PC      X5_T0      X28_T3          
+    33    1    000015bc    000015a0    00000003    
+
+15be:	4105                	li	sp,1
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    34    1    000015be    00000001    000015a0    00000003    
+
+15c0:	00208663          	beq	ra,sp,15cc <test_3+0x12>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    35    1    000015c0    00000001    00000001    000015a0    00000003    
+
+15c4:	1bc01863          	bne	zero,t3,1774 <fail>
+15c8:	01c01663          	bne	zero,t3,15d4 <test_4>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    37    1    000015c8    00000001    00000001    000015a0    00000003    
+
+15cc:	fe208ee3          	beq	ra,sp,15c8 <test_3+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    36    1    000015cc    00000001    00000001    000015a0    00000003    
+
+15d0:	1bc01263          	bne	zero,t3,1774 <fail>
+
+000015d4 <test_4>:
+15d4:	4e11                	li	t3,4
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    38    1    000015d4    00000001    00000001    000015a0    00000003    
+
+15d6:	50fd                	li	ra,-1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    39    1    000015d6    00000001    00000001    000015a0    00000004    
+
+15d8:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    40    1    000015d8    ffffffff    00000001    000015a0    00000004    
+
+15da:	00208663          	beq	ra,sp,15e6 <test_4+0x12>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    41    1    000015da    ffffffff    ffffffff    000015a0    00000004    
+
+15de:	19c01b63          	bne	zero,t3,1774 <fail>
+15e2:	01c01663          	bne	zero,t3,15ee <test_5>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    44    2    000015e2    ffffffff    ffffffff    000015a0    00000004    
+
+15e6:	fe208ee3          	beq	ra,sp,15e2 <test_4+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    42    1    000015e6    ffffffff    ffffffff    000015a0    00000004    
+
+15ea:	19c01563          	bne	zero,t3,1774 <fail>
+
+000015ee <test_5>:
+15ee:	4e15                	li	t3,5
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    46    2    000015ee    ffffffff    ffffffff    000015a0    00000004    
+
+15f0:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    47    1    000015f0    ffffffff    ffffffff    000015a0    00000005    
+
+15f2:	4105                	li	sp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    48    1    000015f2    ffffffff    000015a0    00000005    
+
+15f4:	00208463          	beq	ra,sp,15fc <test_5+0xe>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    49    1    000015f4    00000001    000015a0    00000005    
+
+15f8:	01c01463          	bne	zero,t3,1600 <test_5+0x12>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    50    1    000015f8    00000001    000015a0    00000005    
+
+15fc:	17c01c63          	bne	zero,t3,1774 <fail>
+1600:	fe208ee3          	beq	ra,sp,15fc <test_5+0xe>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    51    1    00001600    00000001    000015a0    00000005    
+
+
+00001604 <test_6>:
+1604:	4e19                	li	t3,6
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    52    1    00001604    00000001    000015a0    00000005    
+
+1606:	4085                	li	ra,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    53    1    00001606    00000001    000015a0    00000006    
+
+1608:	4101                	li	sp,0
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    54    1    00001608    00000001    00000001    000015a0    00000006    
+
+160a:	00208463          	beq	ra,sp,1612 <test_6+0xe>
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    55    1    0000160a    00000001    000015a0    00000006    
+
+160e:	01c01463          	bne	zero,t3,1616 <test_6+0x12>
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    56    1    0000160e    00000001    000015a0    00000006    
+
+1612:	17c01163          	bne	zero,t3,1774 <fail>
+1616:	fe208ee3          	beq	ra,sp,1612 <test_6+0xe>
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    57    1    00001616    00000001    000015a0    00000006    
+
+
+0000161a <test_7>:
+161a:	4e1d                	li	t3,7
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    59    2    0000161a    00000001    000015a0    00000006    
+
+161c:	50fd                	li	ra,-1
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    60    1    0000161c    00000001    000015a0    00000007    
+
+161e:	4105                	li	sp,1
+
+  Clk#      Delay      PC      X1_RA      X5_T0      X28_T3          
+    61    1    0000161e    ffffffff    000015a0    00000007    
+
+1620:	00208463          	beq	ra,sp,1628 <test_7+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    62    1    00001620    ffffffff    00000001    000015a0    00000007    
+
+1624:	01c01463          	bne	zero,t3,162c <test_7+0x12>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    63    1    00001624    ffffffff    00000001    000015a0    00000007    
+
+1628:	15c01663          	bne	zero,t3,1774 <fail>
+162c:	fe208ee3          	beq	ra,sp,1628 <test_7+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    64    1    0000162c    ffffffff    00000001    000015a0    00000007    
+
+
+00001630 <test_8>:
+1630:	4e21                	li	t3,8
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    65    1    00001630    ffffffff    00000001    000015a0    00000007    
+
+1632:	4085                	li	ra,1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    66    1    00001632    ffffffff    00000001    000015a0    00000008    
+
+1634:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    67    1    00001634    00000001    00000001    000015a0    00000008    
+
+1636:	00208463          	beq	ra,sp,163e <test_8+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    68    1    00001636    00000001    ffffffff    000015a0    00000008    
+
+163a:	01c01463          	bne	zero,t3,1642 <test_8+0x12>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    69    1    0000163a    00000001    ffffffff    000015a0    00000008    
+
+163e:	13c01b63          	bne	zero,t3,1774 <fail>
+1642:	fe208ee3          	beq	ra,sp,163e <test_8+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    70    1    00001642    00000001    ffffffff    000015a0    00000008    
+
+
+00001646 <test_9>:
+1646:	4e25                	li	t3,9
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    72    2    00001646    00000001    ffffffff    000015a0    00000008    
+
+1648:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    73    1    00001648    00000001    ffffffff    000015a0    00000009    
+
+164a:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X5_T0      X28_T3          
+    74    1    0000164a    00000001    ffffffff    000015a0    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    80    1    0000164a    ffffffff    00000001    00000002    00000009    
+
+164c:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    75    1    0000164c    ffffffff    000015a0    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    81    1    0000164c    ffffffff    00000001    00000002    00000009    
+
+164e:	12208363          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    76    1    0000164e    ffffffff    000015a0    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    82    1    0000164e    ffffffff    00000001    00000002    00000009    
+
+1652:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    77    1    00001652    ffffffff    000015a0    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    83    1    00001652    ffffffff    00000001    00000002    00000009    
+
+1654:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    78    1    00001654    ffffffff    00000001    000015a0    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    84    1    00001654    ffffffff    00000002    00000002    00000009    
+
+1656:	fe521ae3          	bne	tp,t0,164a <test_9+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    79    1    00001656    ffffffff    00000001    00000002    00000009    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    85    1    00001656    ffffffff    00000002    00000002    00000009    
+
+
+0000165a <test_10>:
+165a:	4e29                	li	t3,10
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    86    1    0000165a    ffffffff    00000002    00000002    00000009    
+
+165c:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    87    1    0000165c    ffffffff    00000002    00000002    0000000a    
+
+165e:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    88    1    0000165e    ffffffff    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    95    1    0000165e    ffffffff    00000001    00000002    0000000a    
+
+1660:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    89    1    00001660    ffffffff    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    96    1    00001660    ffffffff    00000001    00000002    0000000a    
+
+1662:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    90    1    00001662    ffffffff    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    97    1    00001662    ffffffff    00000001    00000002    0000000a    
+
+1664:	10208863          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    91    1    00001664    ffffffff    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    98    1    00001664    ffffffff    00000001    00000002    0000000a    
+
+1668:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    92    1    00001668    ffffffff    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    99    1    00001668    ffffffff    00000001    00000002    0000000a    
+
+166a:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    93    1    0000166a    ffffffff    00000001    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    100    1    0000166a    ffffffff    00000002    00000002    0000000a    
+
+166c:	fe5219e3          	bne	tp,t0,165e <test_10+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    94    1    0000166c    ffffffff    00000001    00000002    0000000a    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    101    1    0000166c    ffffffff    00000002    00000002    0000000a    
+
+
+00001670 <test_11>:
+1670:	4e2d                	li	t3,11
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    102    1    00001670    ffffffff    00000002    00000002    0000000a    
+
+1672:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    103    1    00001672    ffffffff    00000002    00000002    0000000b    
+
+1674:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    104    1    00001674    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    112    1    00001674    ffffffff    00000001    00000002    0000000b    
+
+1676:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    105    1    00001676    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    113    1    00001676    ffffffff    00000001    00000002    0000000b    
+
+1678:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    106    1    00001678    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    114    1    00001678    ffffffff    00000001    00000002    0000000b    
+
+167a:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    107    1    0000167a    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    115    1    0000167a    ffffffff    00000001    00000002    0000000b    
+
+167c:	0e208c63          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    108    1    0000167c    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    116    1    0000167c    ffffffff    00000001    00000002    0000000b    
+
+1680:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    109    1    00001680    ffffffff    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    117    1    00001680    ffffffff    00000001    00000002    0000000b    
+
+1682:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    110    1    00001682    ffffffff    00000001    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    118    1    00001682    ffffffff    00000002    00000002    0000000b    
+
+1684:	fe5218e3          	bne	tp,t0,1674 <test_11+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    111    1    00001684    ffffffff    00000001    00000002    0000000b    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    119    1    00001684    ffffffff    00000002    00000002    0000000b    
+
+
+00001688 <test_12>:
+1688:	4e31                	li	t3,12
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    120    1    00001688    ffffffff    00000002    00000002    0000000b    
+
+168a:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    121    1    0000168a    ffffffff    00000002    00000002    0000000c    
+
+168c:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    122    1    0000168c    ffffffff    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    129    1    0000168c    ffffffff    00000001    00000002    0000000c    
+
+168e:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    123    1    0000168e    ffffffff    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    130    1    0000168e    ffffffff    00000001    00000002    0000000c    
+
+1690:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    124    1    00001690    ffffffff    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    131    1    00001690    ffffffff    00000001    00000002    0000000c    
+
+1692:	0e208163          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    125    1    00001692    ffffffff    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    132    1    00001692    ffffffff    00000001    00000002    0000000c    
+
+1696:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    126    1    00001696    ffffffff    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    133    1    00001696    ffffffff    00000001    00000002    0000000c    
+
+1698:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    127    1    00001698    ffffffff    00000001    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    134    1    00001698    ffffffff    00000002    00000002    0000000c    
+
+169a:	fe5219e3          	bne	tp,t0,168c <test_12+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    128    1    0000169a    ffffffff    00000001    00000002    0000000c    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    135    1    0000169a    ffffffff    00000002    00000002    0000000c    
+
+
+0000169e <test_13>:
+169e:	4e35                	li	t3,13
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    136    1    0000169e    ffffffff    00000002    00000002    0000000c    
+
+16a0:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    137    1    000016a0    ffffffff    00000002    00000002    0000000d    
+
+16a2:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    138    1    000016a2    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    146    1    000016a2    ffffffff    00000001    00000002    0000000d    
+
+16a4:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    139    1    000016a4    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    147    1    000016a4    ffffffff    00000001    00000002    0000000d    
+
+16a6:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    140    1    000016a6    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    148    1    000016a6    ffffffff    00000001    00000002    0000000d    
+
+16a8:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    141    1    000016a8    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    149    1    000016a8    ffffffff    00000001    00000002    0000000d    
+
+16aa:	0c208563          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    142    1    000016aa    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    150    1    000016aa    ffffffff    00000001    00000002    0000000d    
+
+16ae:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    143    1    000016ae    ffffffff    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    151    1    000016ae    ffffffff    00000001    00000002    0000000d    
+
+16b0:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    144    1    000016b0    ffffffff    00000001    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    152    1    000016b0    ffffffff    00000002    00000002    0000000d    
+
+16b2:	fe5218e3          	bne	tp,t0,16a2 <test_13+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    145    1    000016b2    ffffffff    00000001    00000002    0000000d    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    153    1    000016b2    ffffffff    00000002    00000002    0000000d    
+
+
+000016b6 <test_14>:
+16b6:	4e39                	li	t3,14
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    154    1    000016b6    ffffffff    00000002    00000002    0000000d    
+
+16b8:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    155    1    000016b8    ffffffff    00000002    00000002    0000000e    
+
+16ba:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    156    1    000016ba    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    164    1    000016ba    ffffffff    00000001    00000002    0000000e    
+
+16bc:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    157    1    000016bc    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    165    1    000016bc    ffffffff    00000001    00000002    0000000e    
+
+16be:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    158    1    000016be    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    166    1    000016be    ffffffff    00000001    00000002    0000000e    
+
+16c0:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    159    1    000016c0    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    167    1    000016c0    ffffffff    00000001    00000002    0000000e    
+
+16c2:	0a208963          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    160    1    000016c2    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    168    1    000016c2    ffffffff    00000001    00000002    0000000e    
+
+16c6:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    161    1    000016c6    ffffffff    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    169    1    000016c6    ffffffff    00000001    00000002    0000000e    
+
+16c8:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    162    1    000016c8    ffffffff    00000001    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    170    1    000016c8    ffffffff    00000002    00000002    0000000e    
+
+16ca:	fe5218e3          	bne	tp,t0,16ba <test_14+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    163    1    000016ca    ffffffff    00000001    00000002    0000000e    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    171    1    000016ca    ffffffff    00000002    00000002    0000000e    
+
+
+000016ce <test_15>:
+16ce:	4e3d                	li	t3,15
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    172    1    000016ce    ffffffff    00000002    00000002    0000000e    
+
+16d0:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    173    1    000016d0    ffffffff    00000002    00000002    0000000f    
+
+16d2:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    174    1    000016d2    ffffffff    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    180    1    000016d2    ffffffff    00000001    00000002    0000000f    
+
+16d4:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    175    1    000016d4    ffffffff    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    181    1    000016d4    ffffffff    00000001    00000002    0000000f    
+
+16d6:	08208f63          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    176    1    000016d6    ffffffff    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    182    1    000016d6    ffffffff    00000001    00000002    0000000f    
+
+16da:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    177    1    000016da    ffffffff    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    183    1    000016da    ffffffff    00000001    00000002    0000000f    
+
+16dc:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    178    1    000016dc    ffffffff    00000001    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    184    1    000016dc    ffffffff    00000002    00000002    0000000f    
+
+16de:	fe521ae3          	bne	tp,t0,16d2 <test_15+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    179    1    000016de    ffffffff    00000001    00000002    0000000f    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    185    1    000016de    ffffffff    00000002    00000002    0000000f    
+
+
+000016e2 <test_16>:
+16e2:	4e41                	li	t3,16
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    186    1    000016e2    ffffffff    00000002    00000002    0000000f    
+
+16e4:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    187    1    000016e4    ffffffff    00000002    00000002    00000010    
+
+16e6:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    188    1    000016e6    ffffffff    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    195    1    000016e6    ffffffff    00000001    00000002    00000010    
+
+16e8:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    189    1    000016e8    ffffffff    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    196    1    000016e8    ffffffff    00000001    00000002    00000010    
+
+16ea:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    190    1    000016ea    ffffffff    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    197    1    000016ea    ffffffff    00000001    00000002    00000010    
+
+16ec:	08208463          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    191    1    000016ec    ffffffff    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    198    1    000016ec    ffffffff    00000001    00000002    00000010    
+
+16f0:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    192    1    000016f0    ffffffff    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    199    1    000016f0    ffffffff    00000001    00000002    00000010    
+
+16f2:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    193    1    000016f2    ffffffff    00000001    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    200    1    000016f2    ffffffff    00000002    00000002    00000010    
+
+16f4:	fe5219e3          	bne	tp,t0,16e6 <test_16+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    194    1    000016f4    ffffffff    00000001    00000002    00000010    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    201    1    000016f4    ffffffff    00000002    00000002    00000010    
+
+
+000016f8 <test_17>:
+16f8:	4e45                	li	t3,17
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    202    1    000016f8    ffffffff    00000002    00000002    00000010    
+
+16fa:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    203    1    000016fa    ffffffff    00000002    00000002    00000011    
+
+16fc:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    204    1    000016fc    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    212    1    000016fc    ffffffff    00000001    00000002    00000011    
+
+16fe:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    205    1    000016fe    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    213    1    000016fe    ffffffff    00000001    00000002    00000011    
+
+1700:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    206    1    00001700    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    214    1    00001700    ffffffff    00000001    00000002    00000011    
+
+1702:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    207    1    00001702    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    215    1    00001702    ffffffff    00000001    00000002    00000011    
+
+1704:	06208863          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    208    1    00001704    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    216    1    00001704    ffffffff    00000001    00000002    00000011    
+
+1708:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    209    1    00001708    ffffffff    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    217    1    00001708    ffffffff    00000001    00000002    00000011    
+
+170a:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    210    1    0000170a    ffffffff    00000001    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    218    1    0000170a    ffffffff    00000002    00000002    00000011    
+
+170c:	fe5218e3          	bne	tp,t0,16fc <test_17+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    211    1    0000170c    ffffffff    00000001    00000002    00000011    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    219    1    0000170c    ffffffff    00000002    00000002    00000011    
+
+
+00001710 <test_18>:
+1710:	4e49                	li	t3,18
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    220    1    00001710    ffffffff    00000002    00000002    00000011    
+
+1712:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    221    1    00001712    ffffffff    00000002    00000002    00000012    
+
+1714:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    222    1    00001714    ffffffff    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    229    1    00001714    ffffffff    00000001    00000002    00000012    
+
+1716:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    223    1    00001716    ffffffff    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    230    1    00001716    ffffffff    00000001    00000002    00000012    
+
+1718:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    224    1    00001718    ffffffff    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    231    1    00001718    ffffffff    00000001    00000002    00000012    
+
+171a:	04208d63          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    225    1    0000171a    ffffffff    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    232    1    0000171a    ffffffff    00000001    00000002    00000012    
+
+171e:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    226    1    0000171e    ffffffff    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    233    1    0000171e    ffffffff    00000001    00000002    00000012    
+
+1720:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    227    1    00001720    ffffffff    00000001    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    234    1    00001720    ffffffff    00000002    00000002    00000012    
+
+1722:	fe5219e3          	bne	tp,t0,1714 <test_18+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    228    1    00001722    ffffffff    00000001    00000002    00000012    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    235    1    00001722    ffffffff    00000002    00000002    00000012    
+
+
+00001726 <test_19>:
+1726:	4e4d                	li	t3,19
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    236    1    00001726    ffffffff    00000002    00000002    00000012    
+
+1728:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    237    1    00001728    ffffffff    00000002    00000002    00000013    
+
+172a:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    238    1    0000172a    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    246    1    0000172a    ffffffff    00000001    00000002    00000013    
+
+172c:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    239    1    0000172c    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    247    1    0000172c    ffffffff    00000001    00000002    00000013    
+
+172e:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    240    1    0000172e    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    248    1    0000172e    ffffffff    00000001    00000002    00000013    
+
+1730:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    241    1    00001730    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    249    1    00001730    ffffffff    00000001    00000002    00000013    
+
+1732:	04208163          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    242    1    00001732    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    250    1    00001732    ffffffff    00000001    00000002    00000013    
+
+1736:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    243    1    00001736    ffffffff    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    251    1    00001736    ffffffff    00000001    00000002    00000013    
+
+1738:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    244    1    00001738    ffffffff    00000001    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    252    1    00001738    ffffffff    00000002    00000002    00000013    
+
+173a:	fe5218e3          	bne	tp,t0,172a <test_19+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    245    1    0000173a    ffffffff    00000001    00000002    00000013    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    253    1    0000173a    ffffffff    00000002    00000002    00000013    
+
+
+0000173e <test_20>:
+173e:	4e51                	li	t3,20
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    254    1    0000173e    ffffffff    00000002    00000002    00000013    
+
+1740:	4201                	li	tp,0
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    255    1    00001740    ffffffff    00000002    00000002    00000014    
+
+1742:	4081                	li	ra,0
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    256    1    00001742    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    264    1    00001742    ffffffff    00000001    00000002    00000014    
+
+1744:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    257    1    00001744    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    265    1    00001744    ffffffff    00000001    00000002    00000014    
+
+1746:	0001                	nop
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    258    1    00001746    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    266    1    00001746    ffffffff    00000001    00000002    00000014    
+
+1748:	517d                	li	sp,-1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    259    1    00001748    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    267    1    00001748    ffffffff    00000001    00000002    00000014    
+
+174a:	02208563          	beq	ra,sp,1774 <fail>
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    260    1    0000174a    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    268    1    0000174a    ffffffff    00000001    00000002    00000014    
+
+174e:	0205                	addi	tp,tp,1
+
+  Clk#      Delay      PC      X2_SP      X5_T0      X28_T3          
+    261    1    0000174e    ffffffff    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    269    1    0000174e    ffffffff    00000001    00000002    00000014    
+
+1750:	4289                	li	t0,2
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    262    1    00001750    ffffffff    00000001    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    270    1    00001750    ffffffff    00000002    00000002    00000014    
+
+1752:	fe5218e3          	bne	tp,t0,1742 <test_20+0x4>
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    263    1    00001752    ffffffff    00000001    00000002    00000014    
+
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    271    1    00001752    ffffffff    00000002    00000002    00000014    
+
+
+00001756 <test_21>:
+1756:	4085                	li	ra,1
+
+  Clk#      Delay      PC      X2_SP      X4_TP      X5_T0      X28_T3          
+    272    1    00001756    ffffffff    00000002    00000002    00000014    
+
+1758:	00000663          	beqz	zero,1764 <test_21+0xe>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3          
+    273    1    00001758    00000001    ffffffff    00000002    00000002    00000014    
+
+175c:	0085                	addi	ra,ra,1
+175e:	0085                	addi	ra,ra,1
+1760:	0085                	addi	ra,ra,1
+1762:	0085                	addi	ra,ra,1
+1764:	0085                	addi	ra,ra,1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3          
+    274    1    00001764    00000001    ffffffff    00000002    00000002    00000014    
+
+1766:	0085                	addi	ra,ra,1
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3          
+    275    1    00001766    00000002    ffffffff    00000002    00000002    00000014    
+
+1768:	4e8d                	li	t4,3
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3          
+    276    1    00001768    00000003    ffffffff    00000002    00000002    00000014    
+
+176a:	4e55                	li	t3,21
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3      X29_T4          
+    277    1    0000176a    00000003    ffffffff    00000002    00000002    00000014    00000003    
+
+176c:	01d09463          	bne	ra,t4,1774 <fail>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3      X29_T4          
+    278    1    0000176c    00000003    ffffffff    00000002    00000002    00000015    00000003    
+
+1770:	03c01663          	bne	zero,t3,179c <pass>
+
+  Clk#      Delay      PC      X1_RA      X2_SP      X4_TP      X5_T0      X28_T3      X29_T4          
+    279    1    00001770    00000003    ffffffff    00000002    00000002    00000015    00000003    
+
+
