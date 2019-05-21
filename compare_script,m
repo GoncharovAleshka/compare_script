@@ -1,0 +1,76 @@
+f_id = fopen('beq.dump', 'r');
+txt_dump = textscan(f_id,'%s','delimiter','\n'); 
+fclose(f_id);
+
+expression_zero_test = '\w{8} <_run_test>';
+start_Index = regexp(txt_dump{1,1},expression_zero_test);
+
+index_of_test_start_and_end = 0;
+for index = 1:length(start_Index)
+    if (start_Index{index} ~= 0)
+        index_of_test_start_and_end = index_of_test_start_and_end + 1;
+        save_line_number_start_t(index_of_test_start_and_end) = index;
+    end
+end
+
+expression_test = '\w{8} <test_';
+start_Index = regexp(txt_dump{1,1},expression_test);
+
+for index = 1:length(start_Index)
+    if (start_Index{index} ~= 0)
+        index_of_test_start_and_end = index_of_test_start_and_end + 1;
+        save_line_number_start_t(index_of_test_start_and_end) = index;
+    end
+end
+
+for index = 1:(index_of_test_start_and_end - 1)
+    save_line_number_end_t(index) = save_line_number_start_t(index + 1) - 2;
+end
+
+expression_test_end = '\w{8} <fail>';
+start_Index = regexp(txt_dump{1,1},expression_test_end);
+
+for index = 1:length(start_Index)
+    if (start_Index{index} ~= 0)
+        save_line_number_end_t(index_of_test_start_and_end) = index - 2;
+    end
+end
+
+f_id = fopen('trace_mprf_.log', 'r');
+txt_trace = textscan(f_id,'%s','delimiter','\n'); 
+fclose(f_id);
+
+split_txt = regexp(txt_trace{1,1},'[\s\:]*','split');
+
+f_id = fopen('compare_file.dat', 'wb');
+for high_index = 1:index_of_test_start_and_end 
+    for index = save_line_number_start_t(high_index):save_line_number_end_t(high_index)
+        str = txt_dump{1,1}{index}; 
+        fwrite(f_id, str);
+        fprintf(f_id, '\n');
+        if (index ~= save_line_number_start_t(high_index))
+            for index_trace = 4:length(txt_trace{1})
+                temp_str_1 = split_txt{index_trace, 1}{1, 3};
+                temp_str_2 = strcat('0000', str(1:4));
+                 if (strcmp(temp_str_1,temp_str_2))
+                     str_1 = '';
+                     str_2 = '';
+                     fprintf(f_id, '\n');
+                     for index_split = 1:length(split_txt{index_trace, 1})
+                        if ((strcmp(split_txt{index_trace, 1}{1, index_split},'00000000') ) == 0)
+                            str_1 = [str_1 '  ' split_txt{3, 1}{1, index_split} '    '];
+                            str_2 = [str_2 '    ' split_txt{index_trace, 1}{1, index_split}];
+                        end
+                     end
+                     fwrite(f_id, str_1);
+                     fprintf(f_id, '\n');
+                     fwrite(f_id, str_2);
+                     fprintf(f_id, '\n');
+                     fprintf(f_id, '\n');
+                 end
+            end      
+        end
+    end
+    fprintf(f_id, '\n');
+end
+fclose(f_id);
